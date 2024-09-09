@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; max-width: 600px; margin: 0 auto;">
+
+    <h1 style="text-align: center; color: #0073e6;">Order Your Customized T-Shirt</h1>
+
+    <form action="/submit-order" method="POST" style="background-color: white; padding: 20px; border-radius: 8px;">
+        <!-- Tagline on the Shirt -->
+           <fieldset style="border: none; margin-bottom: 15px;">
+         <label for="tagline" style="display: block; margin-bottom: 5px;">Tagline on the Shirt:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+        </fieldset>
+
+        <!-- T-shirt Color -->
+        <fieldset style="border: none; margin-bottom: 15px;">
+            <label for="color" style="display: block; margin-bottom: 5px;">T-shirt Color:</label>
+            <select id="color" name="color" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                <option value="" disabled selected>Select a color</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+            </select>
+        </fieldset>
+
+        <!-- T-shirt Size -->
+        <fieldset style="border: none; margin-bottom: 15px;">
+            <label for="size" style="display: block; margin-bottom: 5px;">T-shirt Size:</label>
+            <select id="size" name="size" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                <option value="" disabled selected>Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+        </fieldset>
+
+        <!-- Quantity -->
+        <fieldset style="border: none; margin-bottom: 15px;">
+            <label for="quantity" style="display: block; margin-bottom: 5px;">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+        </fieldset>
+
+        <!-- Delivery Date -->
+        <fieldset style="border: none; margin-bottom: 15px;">
+            <label for="delivery-date" style="display: block; margin-bottom: 5px;">Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+        </fieldset>
+
+        <!-- Delivery Details -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+            <legend style="font-weight: bold;">Delivery Details</legend>
+
+            <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Recipient's name" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; margin-bottom: 10px;">
+
+            <label for="address" style="display: block; margin-bottom: 5px;">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Delivery address" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; margin-bottom: 10px;">
+
+            <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Recipient's email" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; margin-bottom: 10px;">
+
+            <label for="phone" style="display: block; margin-bottom: 5px;">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Recipient's phone number" required pattern="[0-9]{10}" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+        </fieldset>
+
+        <!-- Additional Comments -->
+        <fieldset style="border: none; margin-bottom: 15px;">
+            <label for="comments" style="display: block; margin-bottom: 5px;">Additional Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Enter any additional comments or special instructions" rows="4" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+        </fieldset>
+
+        <!-- Submit and Reset Buttons -->
+        <div style="text-align: center;">
+            <input type="submit" value="Place Order" style="background-color: #0073e6; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+            <input type="reset" value="Reset Form" style="background-color: #ccc; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+        </div>
+    </form>
+    
+</body>
+</html>
